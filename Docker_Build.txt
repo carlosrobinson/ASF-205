@@ -1,0 +1,78 @@
+*So, let’s start off by looking at the Dockerfile once more:
+
+FROM alpine:latest
+
+LABEL maintainer=”Russ McKendrick <russ@mckendrick.io>”
+
+LABEL description=”This example Dockerfile installs NGINX.”
+
+RUN apk add --update nginx && \
+
+    rm -rf /var/cache/apk/* && \
+
+    mkdir -p /tmp/nginx/
+
+COPY files/nginx.conf /etc/nginx/nginx.conf
+
+COPY files/default.conf /etc/nginx/conf.d/default.conf ADD files/html.tar.gz /usr/share/nginx/
+
+EXPOSE 80/tcp
+
+ENTRYPOINT [“nginx”]
+
+CMD [“-g”, “daemon off;”]
+
+Don’t forget that you will also need the default.conf, html.tar.gz, and nginx.conf files in the files folder. 
+You can find these in the accompanying GitHub repository.
+
+
+
+* So, there are two ways we can go about building our image. The first way would be by specifying the --file switch 
+when we use the docker image build command. We will also utilize the --tag switch to give the new image a unique name:
+$ docker image build --file <path_to_Dockerfile> --tag <REPOSITORY>:<TAG> .
+
+
+
+* As we have a file called Dockerfile, we can also skip using the --file switch. This is the second way of building an image. The following is the code for this:
+
+$ docker image build --tag local:dockerfile-example .
+
+The most important thing to remember is the dot (or period) at the very end. This is to tell the docker image build command 
+to build in the current folder. When you build your image, you should see something similar to the following Terminal output:
+
+
+
+* Once it’s built, you should be able to run the following command to check whether the image is available, 
+as well as the size of your image:
+$ docker image ls
+
+	As you can see from the following Terminal output, my image size is 7.18 MB:
+
+
+* You can launch a container with your newly built image by running this command:
+$ docker container run -d --name dockerfile-example -p 8080:80 local:dockerfile-example
+
+
+
+This will launch a container called dockerfile-example. You can check whether it is running by using the following command:
+$ docker container ls
+
+Opening your browser and going to http://localhost:8080/ should show you an extremely simple web page that looks as follows:
+
+
+
+* Next up, we will quickly run a few of the commands we covered in the Introducing Dockerfiles section of this chapter, 
+starting with the following command:
+$ docker container run --name nginx-version local:dockerfile-example -v
+
+
+
+* The next command we will look at running displays the labels that we embedded at build time.
+To view this information, run the following command:
+$ docker image inspect -f {{.Config.Labels}} local:dockerfile-example
+
+
+
+* Before we move on, you can stop and remove the containers we launched with the following commands:
+$ docker container stop dockerfile-example
+$ docker container rm dockerfile-example nginx-version

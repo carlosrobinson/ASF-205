@@ -1,0 +1,28 @@
+YAML (a recursive acronym for "YAML Ain't Markup Language") is a human-readable data-serialization language. 
+It is commonly used for configuration files and in applications where data is being stored or transmitted.
+
+You can only use images from the Docker Hub with your Docker Compose files.
+False. You can use Docker Compose to build images at runtime.
+
+You use the -d flag to start the container’s detached mode (or in the background).
+
+By default, how does Docker Compose decide on the namespace to use?
+
+
+Which flag, when running docker-machine create, lets you define which service or provider 
+Docker Machine uses to launch your Docker host?
+--drver
+
+Running docker-machine env my-host will reconfigure your local Docker client to interact with my-host.
+False. It will give you commands. Instead, you need to run eval $(dockermachine env my-host).
+
+Multipass has native support for Docker out of the box.
+False. Docker needs to be installed.
+
+Packer is the HashiCorp tool that can be used to create Vagrant Boxes.
+
+Docker Compose was built based on a prior application called Fig, 
+which Docker acquired when the purchased Orchard Laboratories.
+
+Docker on Windows introduces an additional set of commands you need to use in order to manage your Windows containers.
+False. There are no differences in the Docker commands that you need to run to manage your Windows containers.
