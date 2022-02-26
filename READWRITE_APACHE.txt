@@ -1,0 +1,6 @@
+https://www.linuxfordevices.com/tutorials/linux/url-rewriting-in-apache
+
+
+
+
+https://www.phpflow.com/php/how-to-enable-mod_rewrite-module-in-apache/

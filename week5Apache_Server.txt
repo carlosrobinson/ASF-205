@@ -1,0 +1,28 @@
+If httpd.conf has a configuration directive specific to a module that is enabled, 
+Apache httpd server will start with a warning.
+
+	The standalone Docker Swarm is no longer supported or considered a best practice.
+
+When Apache loads for the first time, you should only see two words on the default install page.
+	True
+
+Apache core features can be extended by implementing modules.
+
+
+Modules can be enabled or disabled in the httpd.conf file.
+
+Acting as a intermediary between the client and application services, a proxy server directs 
+client requests to the appropriate backend server.
+
+
+To view a list of all the currently running Docker containers, issue the command: docker container ls.
+
+
+ To enable a module in the httpd.conf file, use the LoadModule Apache directive.
+
+
+ A proxy server is typically used to distribute the load among several servers, seamlessly show content 
+from different websites, or pass requests for processing to application servers over protocols other than HTTP.
+
+To configure apache as a reverse proxy server you need to use both ProxyPass and ProxyPassReverse directives 
+in your configuration file.
