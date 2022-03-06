@@ -1,0 +1,9 @@
+Completed steps:
+	Enabling Rewrite in Apache
+
+	- Make a page called newurl.html
+		* It should have style and content and link back to the home page.
+
+	- Configure your httpd.conf to redirect a non-existent file named oldurl.html to the newly created newurl.html
+		- line 202  Redirect "/oldrul.html" "/newurl.html"
+	- 

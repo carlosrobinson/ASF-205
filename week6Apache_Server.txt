@@ -1,0 +1,9 @@
+URL redirection, sometimes called HTTP redirection, is the process of pointing one URL to another one.
+
+The Apache mod_rewrite module transforms incoming URL requests to a path in the web server's file system.
+
+ Apache URL rewriting is based on pattern matching rules created using regular expressions.
+
+ To restrict which users can view a password protected directory, use the Require directive with the value valid-user.
+
+ A RewriteRule consists of three arguments separated by spaces: the incoming URL pattern, the susbstitue URL and flags.
