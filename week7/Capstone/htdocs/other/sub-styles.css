@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#about-header {
+    background-color: goldenrod;
+}
+
+header {
+    grid-area: head;
+}
+
+ul {
+    grid-area: main;
+    border: 1px solid grey;
+    box-shadow: 0 3px 10px rgba(31, 28, 29, 0.2);
+    width: 700px;
+    margin:  auto;
+    border-radius: 10px 10px;
+    list-style-type: none;
+    padding: 10px;
+}
+
+#about-container {
+    display: grid;
+    grid-template-areas:
+    "head head head head"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+    width: 100vw;
+    height:100vh;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin: auto;
+    gap: 10px;
+    grid-area: footer; 
+}

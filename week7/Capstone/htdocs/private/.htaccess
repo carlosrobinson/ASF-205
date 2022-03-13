@@ -1,0 +1,4 @@
+  AuthType Basic
+  AuthName "PASSWORD DIALOG BOX MESSAGE"
+  AuthUserFile "/usr/local/apache2/htdocs/private/.htpasswd"
+  Require valid-user

@@ -1,0 +1,116 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+  header {
+    grid-area: head;
+  }
+
+
+  main {
+      grid-area: main;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 10px;
+    grid-area: footer; 
+}
+
+  #grid-container {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+    "head head head head"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+    width: 100vw;
+    height:100vh;
+}
+
+#main-header {
+    display: inline;
+    box-shadow: 0 3px 10px rgba(65, 61, 62, 0.2);
+    background-color: goldenrod;
+    text-align: center;
+}
+
+
+#secondary-header {
+    height: 200px;
+}
+
+#main-header > nav {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+#main-header > nav>a:link {
+    text-decoration: none;
+}
+
+
+#main-header > div{
+    margin: auto;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+main > #div1 {
+    grid-area: div1;
+    box-shadow: 0 3px 10px rgba(35, 6, 143, 0.2);
+    /* background-color: red; */
+}
+main > #div2  {
+    grid-area: div2;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+
+ /* background-color: rgb(0, 255, 0);  */
+}
+
+main > #div2 > img {
+    width: 300px;
+    border-radius: 10px 10px;
+}
+
+main > #div2 > h5 {
+    width: 300px;
+    border-radius: 10px 10px;
+}
+
+main > #div3{
+    display: flex;
+    flex-direction: column;
+    grid-area: div3;
+    box-shadow: 0 3px 10px rgba(35, 6, 143, 0.2);
+/* background-color: antiquewhite; */
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+    "div1 div2 div2 div3"
+    "div1 div2 div2 div3"
+    "div1 div2 div2 div3"
+    "div1 div2 div2 div3";
+}
+
+#div3 {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
